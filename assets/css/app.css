@@ -1,0 +1,159 @@
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+
+#offscreen-left {
+	position: absolute;
+	top: 75px;
+	right: 0;
+	bottom: 0;
+	left: 0; 
+	display: none; 
+	z-index: 2;
+	background: #FFF;
+	padding: 20px;
+}
+
+#app-items {
+	z-index: 1;
+}
+
+#menu {
+	background: #316D9B;
+	height: 75px;
+	width: 100%;
+	text-align: center;
+	color: #FFF;
+}
+
+.app-controls,
+#menu h1 {
+	display: inline-block;
+	padding: 20px 30px;
+	font-size: 30px;
+	margin: 0;
+}
+
+	.app-controls:hover {
+		cursor: pointer;
+		background: #1A4C72;
+	}
+	
+	#menu h1 {
+		font-family: Rockwell, "Comic Sans", sans-serif;
+		padding-right: 10px;
+	}
+
+.sg-item {
+	position: relative;
+	border-bottom: 3px double #CCC;
+	padding: 30px;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+	.sg-item.edit-html {
+		min-height: 400px;
+	}
+
+	.sg-title {
+		margin: 0 0 1px;
+		display: block;
+		border-bottom: 1px solid #CCC;
+		padding: 10px 22px 10px 10px;
+		width: 35%;
+	}
+	
+	input[name=sg-title] {
+		padding: 6px 20px 9px 8px;
+		font-size: 2em;
+		font-weight: bold;
+		margin: 2px 0 1px 0;
+		width: 35%;
+		display: none;
+	}
+
+	.sg-html-input,
+	.sg-description-input { display: none; }
+	
+	.sg-description-input {
+		min-height: 200px;
+		width: 98%;
+	}
+	
+	.sg-description-container {
+		padding: 15px;
+		background: #EEE;
+		border: 1px solid #CCC;
+		position: relative;
+		float: left;
+		width: 35%;
+	}
+	
+		.editor-controls {
+			position: absolute;
+			top: -1px;
+			right: -1px;
+			padding: 7px 10px;
+			display: block;
+			font-size: 18px;
+			border: 1px solid #CCC;
+			background: #EEE;
+		}
+		
+		.editor-controls:hover { 
+			cursor: pointer;
+			background: #FFF;
+		}
+		
+		.editor-controls.icon-ok { display: none; }
+	
+	.sg-html-container {
+		float: right;
+		margin-right: 5%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 40%;
+		bottom: 0;
+		padding-left: 20px;
+		border-left: 3px double #CCC;
+		-webkit-resize: horizontal;
+		resize: horizontal;
+	}
+	
+		.sg-html-container.edit { min-height: 400px; }
+		
+		.sg-html { display: none; }
+	
+		.sg-html-input {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			min-height: 390px;
+		}
+	
+	.sg-menu {
+		position: absolute;
+		top: 0;
+		right: 0;
+		border-bottom: 1px solid #CCC;
+		border-left: 1px solid #CCC;
+		background: #FFF;
+		z-index: 10;
+		box-shadow: -1px 0 3px rgba(0,0,0,.5);
+	}
+	
+		.sg-menu i {
+			display: block;
+			padding: 15px 20px 15px 18px;
+			text-align: center;
+			background: #95BADD;
+			color: #FFF;
+			font-size: 24px;
+		}
+		
+			.sg-menu i:hover { background: #EEE; color: #316D9B; cursor: pointer; }
+			.sg-menu i + i { margin-top: 1px; }

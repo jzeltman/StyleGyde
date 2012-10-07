@@ -1,0 +1,130 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+	   More info: h5bp.com/i/378 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>StyleGyde | Blueprints for your Website</title>
+	<meta name="description" content="">
+	
+	<!-- Mobile viewport optimized: h5bp.com/viewport -->
+	<meta name="viewport" content="width=device-width">
+	
+	<link rel="stylesheet" href="assets/css/vendor/normalize.css" />
+	<link rel="stylesheet" href="assets/css/font-awesome.css" />
+	<link rel="stylesheet" href="assets/css/app.css" />
+
+	<script src="assets/js/vendor/modernizr.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+
+<section id="offscreen-top" class="clearfix"></section>
+<section id="offscreen-left" class="clearfix"></section>
+<section id="offscreen-right" class="clearfix"></section>
+
+	<nav id="menu" class="clearfix">
+
+		<!--
+<h1>StyleGyde</h1>
+		
+		<div id="user-account">
+			<a href="#!/login" id="login">Login</a>
+			<a href="#!/signup" id="signup">Signup</a>
+		</div>
+-->
+		
+	</nav>
+	
+	<section id="app-items" class="clearfix"></section>
+
+
+</div>
+
+<script type="html/template" id="login-tmpl">
+	<div id="login-view">
+		<h2>Login</h2>
+		<label for="username">Email</label>
+		<input type="email" name="email" />
+		
+		<label for="password">Password</label>
+		<input type="password" name="password" />
+		
+		<button name="login-action">Login</button>
+	</div>
+</script>
+
+<script type="html/template" id="signup-tmpl">
+	<div id="signup-view">
+		<h2>Signup</h2>
+		<table>
+			<tr>
+				<td class="label"><label for="name">Name</label></td>
+				<td><input type="text" name="name" /></td>
+				<td class="label"><label for="username">Email</label></td>
+				<td><input type="email" name="email" /></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="label"><label for="password">Password</label></td>
+				<td><input type="password" name="password" /></td>
+				<td class="label"><label for="confirm">Confirm</label></td>
+				<td><input type="password" name="confirm" /></td>
+				<td><button name="signup-action">Signup</button></td>
+			</tr>
+		</table>
+	</div>
+</script>
+
+<script type="html/template" id="item-tmpl">
+	<div class="sg-html-container">
+		<div class="sg-html"></div>
+		<textarea class="sg-html-input">{{html}}</textarea>
+		<iframe src="framework/test/index.html" class="sg-html-iframe"></iframe>
+		<i class="icon-edit sg-html-edit editor-controls"></i>
+		<i class="icon-ok sg-html-ok editor-controls"></i>
+	</div>
+	<h1 class="sg-title">{{title}}</h1>
+	<input type="text" name="sg-title" class="sg-title-input" value="{{title}}"/>
+	<div class="sg-description-container">
+		<div class="sg-description">{{description}}</div>
+		<textarea class="sg-description-input">{{description}}</textarea>
+		<i class="icon-edit sg-description-edit editor-controls"></i>
+		<i class="icon-ok sg-description-ok editor-controls"></i>
+	</div>
+	<nav class="sg-menu">
+		<i class="icon-cogs"></i>
+		<i class="icon-ok"></i>
+		<i class="icon-trash"></i>
+	</nav>
+</script>
+
+<script type="html/template" id="css-tmpl">
+	<h1>Edit CSS</h1>
+	<textarea>{{css}}</textarea>
+</script>
+
+<script type="html/template" id="menu-tmpl">
+	<h1 class="logo">StyleGyde</h1>	
+	<i id="add-new" class="icon-plus app-controls"></i>
+	<i id="settings" class="icon-cogs app-controls"></i>
+	<i id="preview" class="icon-eye-open app-controls"></i>
+	<i id="close-preview" class="icon-eye-close app-controls"></i>
+</script>
+
+
+	<script src="assets/js/vendor/jquery.js"></script>
+	<script src="assets/js/vendor/underscore-min.js"></script>
+	<script src="assets/js/vendor/backbone-min.js"></script>
+	<script src="assets/js/app.js"></script>
+
+</body>
+</html>
